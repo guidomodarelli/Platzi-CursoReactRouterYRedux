@@ -69,3 +69,9 @@ Los PropTypes son una propiedad de nuestros componentes que nos permiten especif
 ```bash
 npm install --save prop-types
 ```
+
+## Redux
+
+![flux-vs-redux](docs/flux-vs-redux.jpeg)
+
+[¿Qué es Flux? Entendiendo su arquitectura](https://carlosazaustre.es/como-funciona-flux)
