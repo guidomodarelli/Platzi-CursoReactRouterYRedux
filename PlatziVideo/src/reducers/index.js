@@ -30,6 +30,27 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case 'GET_VIDEO_SOURCE':
+      return {
+        ...state,
+        playing:
+          []
+            .concat(state.trends, state.originals)
+            .find((item) => item.id === Number(action.payload)) || [],
+      };
+    case 'SEARCH_VIDEO':
+      if (action.payload === '') {
+        return {
+          ...state,
+          search: [],
+        };
+      }
+      return {
+        ...state,
+        search:
+          [].concat(state.trends, state.originals).filter((item) => item.title.toLowerCase().includes(action.payload.toLowerCase())) ||
+          [],
+      };
     default:
       return state;
   }

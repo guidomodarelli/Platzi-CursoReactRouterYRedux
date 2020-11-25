@@ -4,12 +4,14 @@ import '../assets/styles/App.scss';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import Categories from '../components/Categories';
+import Header from '../components/Header';
 import Search from '../components/Search';
 
 const Home = ({ myList, trends, originals }) => {
   return (
     <>
-      <Search />
+      <Header />
+      <Search isHome />
       {myList.length > 0 && (
         <Categories title='Mi lista'>
           <Carousel>
